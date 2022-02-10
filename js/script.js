@@ -27,7 +27,7 @@ const getPointerInput = (callback) => {
 }
 
 function fillStarfield(canvas, canvasIndex) {
-	let stars = canvas.offsetWidth < 1400 ? 100 : 133;
+	let stars = canvas.offsetWidth < 1400 ? 100 : canvas.offsetWidth < 2000 ? 133: 150;
 	const context = canvas.getContext('2d');
 	
 	for (let i = 0; i < stars; i++) {
@@ -58,35 +58,24 @@ function buildStarfields(body, canvasArr) {
 		if (true) {
 			canvasArr[0].style.transform = `
 			translate(
-				${Math.floor((pointer.x - xBodyHalf)*.05)}px,
-				${Math.floor((pointer.y - yBodyHalf)*.05)}px) 
+				${Math.floor(11/xBodyHalf*(pointer.x - xBodyHalf))}px,
+				${Math.floor(11/yBodyHalf*(pointer.y - yBodyHalf))}px) 
 			scale(
-				${1 - Math.abs(Math.round((pointer.x - xBodyHalf)/body.offsetWidth*20)/100)},
-				${1 - Math.abs(Math.round((pointer.y - yBodyHalf)/body.offsetHeight*20)/100)})`;
+				${1 - Math.round(5/xBodyHalf*Math.abs(pointer.x - xBodyHalf))/100},
+				${1 - Math.round(5/yBodyHalf*Math.abs(pointer.y - yBodyHalf))/100})`;
 			
-			canvasArr[1].style.transform = `scale(
-				${1 - Math.abs(Math.round((pointer.x - xBodyHalf)/body.offsetWidth*10)/100)},
-				${1 - Math.abs(Math.round((pointer.y - yBodyHalf)/body.offsetHeight*10)/100)})`;
+			canvasArr[1].style.transform = `
+			scale(
+				${1 - Math.round(3/xBodyHalf*Math.abs(pointer.x - xBodyHalf))/100},
+				${1 - Math.round(3/yBodyHalf*Math.abs(pointer.y - yBodyHalf))/100})`;
 
 			canvasArr[2].style.transform = `
 			translate(
-				${Math.floor((-pointer.x + xBodyHalf)*.01)}px,
-				${Math.floor((-pointer.y + yBodyHalf)*.01)}px) 
+				${Math.floor(11/xBodyHalf*(-pointer.x - xBodyHalf))}px,
+				${Math.floor(11/yBodyHalf*(-pointer.y - yBodyHalf))}px) 
 			scale(
-				${1 - Math.abs(Math.round((pointer.x - xBodyHalf)/body.offsetWidth*5)/100)},
-				${1 - Math.abs(Math.round((pointer.y - yBodyHalf)/body.offsetHeight*5)/100)})`;
-		} else {
-			canvasArr[0].style.transform = `translate(
-				${Math.floor((pointer.x - xBodyHalf)*.03)}px,
-				${Math.floor((pointer.y - yBodyHalf)*.03)}px)`;
-			
-			canvasArr[1].style.transform = `translate(
-				${Math.floor((-pointer.x + xBodyHalf)*.010)}px,
-				${Math.floor((-pointer.y + yBodyHalf)*.010)}px)`;
-
-			canvasArr[2].style.transform = `translate(
-				${Math.floor((-pointer.x + xBodyHalf)*.005)}px,
-				${Math.floor((-pointer.y + yBodyHalf)*.005)}px)`;
+				${1 - Math.round(2/xBodyHalf*Math.abs(pointer.x - xBodyHalf))/100},
+				${1 - Math.round(2/yBodyHalf*Math.abs(pointer.y - yBodyHalf))/100})`;
 		}
 	};
 
