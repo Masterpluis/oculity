@@ -65,7 +65,7 @@ main {
 #traficon {
 	animation-name: traficon;
 	animation-duration: 40s;
-	animation-delay: 1s;
+	animation-delay: 10s;
 	transform-origin: 10% 38%;
 	animation-timing-function: cubic-bezier(.5, .3, .5, .8);
 	animation-iteration-count: infinite;
