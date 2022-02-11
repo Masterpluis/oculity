@@ -83,8 +83,8 @@ function buildStarfields(body, canvasArr) {
 }
 
 // ================ SETUP ================
-const canvasArr = Array.from(document.querySelectorAll('.starfield'));
 function setup() {
+	const canvasArr = Array.from(document.querySelectorAll('.starfield'));
 	const body = document.querySelector('body');
 
 	buildStarfields(body, canvasArr);
