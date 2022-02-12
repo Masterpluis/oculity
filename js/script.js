@@ -89,6 +89,13 @@ function setup() {
 
 	buildStarfields(body, canvasArr);
 
+	let resizeId;
+	function resize() {
+		clearTimeout(resizeId);
+		resizeId = setTimeout(() => buildStarfields(body, canvasArr), 500);
+	}
+
+	window.addEventListener("resize", resize);
 }
 
 window.addEventListener("load", setup);
