@@ -1,9 +1,11 @@
 // ================ STARFIELD HOME BACKGROUND ================
-
+// The homepage background represents a galaxy full of stars, which shifts based on cursor movement.
+// ================
 function randRange(min, max) {
 	return Math.random() * (max - min) + min;
 }
 
+// ================
 const getPointerInput = (callback) => {
 	let pointer = {
 		x: false,
@@ -26,6 +28,7 @@ const getPointerInput = (callback) => {
 	document.addEventListener('mousemove', (e) => mouseMove(e), true);
 }
 
+// ================
 function fillStarfield(canvas, canvasIndex) {
 	let stars = canvas.offsetWidth < 1400 ? 100 : canvas.offsetWidth < 2000 ? 133: 150;
 	const context = canvas.getContext('2d');
@@ -42,6 +45,7 @@ function fillStarfield(canvas, canvasIndex) {
 	}
 }
 
+// ================
 function buildStarfields(body, canvasArr) {
 	for (let i = 0; i < canvasArr.length; i++) {
 		const canvas = canvasArr[i];
@@ -82,7 +86,7 @@ function buildStarfields(body, canvasArr) {
 	getPointerInput(handlePointer);
 }
 
-// ================ SETUP ================
+// ================
 function setup() {
 	const canvasArr = Array.from(document.querySelectorAll('.starfield'));
 	const body = document.querySelector('body');

@@ -1,6 +1,19 @@
 body {
-	margin: 0;
 	max-width: 100%;
+	color: #ddd;
+	font-family: "Montserrat", sans-serif;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../media/Asset\ 1.svg) left top / contain no-repeat;
+	width: 506px;
+	max-width: 100vw;
+	height: 125px;
+	max-height: 24.8vw;
+	z-index: 1;
 }
 
 #logo-container {
@@ -11,15 +24,56 @@ body {
 	align-items: center;
 }
 #logo {
-	max-width: 300px;
+	width: 300px;
+	max-width: 60vw;
 }
 
 main {
-	height: 700px;
 	min-height: 100vh;
 }
-.home-body{
-	overflow: hidden;
+
+section {
+	padding: 5rem 0;
+	display: flex;
+	justify-content: center;
+}
+section:first-of-type {
+	padding-top: 8rem;
+}
+section:last-of-type {
+	padding-bottom: 8rem;
+}
+
+.row {
+	box-sizing: border-box;
+	width: 1240px;
+	padding: 0 2rem;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 2rem;
+}
+
+.column-1-1, .column-1-2, .column-1-3, .column-1-4, .column-1-6, .column-1-12 {
+	box-sizing: border-box;
+	grid-column-end: span 12;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	/* border-radius: 500rem; */
+}
+
+h1, h2, h3 {
+	margin-bottom: .5em;
+}
+
+p {
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 /* ======= UNDER CONSTRUCTION ======= */
@@ -88,82 +142,43 @@ main {
 	z-index: -1;
 }
 
-#home-header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: url(../media/Asset\ 1.svg) left top / contain no-repeat;
-	width: 506px;
-	max-width: 100vw;
-	height: 125px;
-	z-index: 1;
+/* ======= HOME INTERFACE ======= */
+.home-body{
+	overflow: hidden;
 }
 
-/* ======= HOME INTERFACE ======= */
 #home-interface {
-	height: 100%;
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 #home-interface .container {
-	display: grid;
-	grid-template-columns: 4fr 1fr;
-	grid-template-rows: 56fr 60fr;
-	grid-gap: 10px;
-	grid-template-areas:
-	"graphic designer"
-	"web designer";
-}
-#home-interface	#graphic {
-	grid-area: graphic;
 	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-}
-#home-interface #web {
-	grid-area: web;
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-start;
-}
-#home-interface #web svg, #home-interface #graphic svg {
-	height: 23vw;
-}
-#home-interface #designer {
-	grid-area: designer;
-	display: flex;
-	justify-content: flex-start;
+	flex-direction: column;
 	align-items: center;
-	height: 100%;
-}
-#home-interface #designer svg {
-	height: 50vw;
 }
 
-@media screen and (min-width: 1400px) {
-	#home-interface #web svg, #home-interface #graphic svg {
-		height: 13vw;
-	}
-	#home-interface #designer svg {
-		height: 30vw;
-	}
-}
-
-#home-interface a svg {
+#home-interface svg {
 	transition-duration:.3s;
 	filter: drop-shadow(0 0 5px rgba(115,126,145,0));
 }
-#home-interface a svg .cls-1 {
+#home-interface svg:first-child {
+	display: none;
+}
+#home-interface svg.mobile {
+	height: 16vw;
+}
+#home-interface svg .cls-1 {
 	fill:#fff;
 }
-#home-interface a svg .cls-2 {
+#home-interface svg .cls-2 {
 	fill:none;
 	stroke:#212e44;
 	stroke-miterlimit:10;
 	stroke-width:2.83px;
 }
-#home-interface a .cls-2 {
+#home-interface .cls-2 {
 	transition-duration:.5s;
 }
 #home-interface a:hover svg {
@@ -171,4 +186,72 @@ main {
 }
 #home-interface a:hover .cls-2 {
 	stroke: #8eb1be;
+}
+
+@media screen and (min-width: 500px) {
+	.column-1-2 {
+		grid-column-start: span 6;
+	}
+	.column-1-3 {
+		grid-column-start: span 4;
+	}
+	.column-1-4 {
+		grid-column-start: span 3;
+	}
+	.column-1-6 {
+		grid-column-start: span 2;
+	}
+	.column-1-12 {
+		grid-column-start: span 1;
+	}
+
+	#home-interface svg.mobile {
+		display: none;
+	}
+	#home-interface svg:first-child {
+		display: block;
+	}
+	#home-interface .container {
+		display: grid;
+		grid-template-columns: 3.5fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-gap: 10px;
+		grid-template-areas:
+		"portfolio cv"
+		"over cv";
+	}
+	#home-interface	#portfolio {
+		grid-area: portfolio;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
+	#home-interface #over {
+		grid-area: over;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
+	#home-interface #cv {
+		grid-area: cv;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 100%;
+	}
+	#home-interface #over svg:first-child, #home-interface #portfolio svg:first-child {
+		height: 23vw;
+	}
+	#home-interface #cv svg:first-child {
+		height: 47vw;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	#home-interface #over svg:first-child, #home-interface #portfolio svg:first-child {
+		height: 13vw;
+	}
+	#home-interface #cv svg:first-child {
+		height: 26.5vw;
+	}
 }
