@@ -20,7 +20,9 @@ class Portfolio {
 		fetch('js/portfolioContent.json')
 			.then(response => response.json())
 			.then(data => this.fillItemsField(data))
-			.catch(error => console.log("ERROR: " + error.message))
+			.catch(error => {
+				throw(error)
+			})
 	}
 	fillItemsField(content) {
 		this.itemsField.innerHTML = "";
@@ -78,7 +80,6 @@ class Portfolio {
 
 		portfolioItem.appendChild(image);
 		portfolioItem.appendChild(portfolioContent);
-		console.log(portfolioItem);
 		this.itemsField.appendChild(portfolioItem)
 	}
 
