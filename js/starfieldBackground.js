@@ -28,6 +28,15 @@ const getPointerInput = (callback) => {
 	document.addEventListener('mousemove', (e) => mouseMove(e), true);
 }
 
+class Starfield {
+	constructor(body, canvasArr) {
+		this.canvasArr = canvasArr;
+		this.body = body;
+		this.width = this.body.offsetWidth;
+		this.height = this.body.offsetHeight;
+	}
+}
+
 // ================
 function fillStarfield(canvas, canvasIndex) {
 	let stars = canvas.offsetWidth < 1400 ? 100 : canvas.offsetWidth < 2000 ? 133: 150;
@@ -90,6 +99,8 @@ function buildStarfields(body, canvasArr) {
 function setup() {
 	const canvasArr = Array.from(document.querySelectorAll('.starfield'));
 	const body = document.querySelector('body');
+
+	const starfield = new Starfield(body, canvasArr);
 
 	buildStarfields(body, canvasArr);
 
