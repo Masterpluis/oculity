@@ -1,34 +1,34 @@
 [
-	{
-		"title": "Strawberry website",
-		"text": "Dit is de eindopdracht van HTML/CSS tijdens m'n studie Front-end Developer.",
-		"img": "strawberry",
-		"type": "dev",
-		"web": "https://masterpluis.github.io/Strawberry_website",
-		"code": "https://github.com/Masterpluis/Strawberry_website"
-	},
-	{
-		"title": "Deze website",
-		"text": "",
-		"img": "oculity",
-		"type": "dev",
-		"web": "https://masterpluis.github.io/oculity",
-		"code": "https://github.com/Masterpluis/oculity"
-	},
-	{
-		"title": "Boxgame app",
-		"text": "",
-		"img": "boxgame",
-		"type": "dev",
-		"web": "https://masterpluis.github.io/Boxgame",
-		"code": "https://github.com/Masterpluis/Boxgame"
-	},
-	{
-		"title": "Gernik flyer",
-		"text": "De eigenaar van het beveiligingsbedrijf Gernik in Eindhoven heeft aan mij gevraagd om drie flyers te ontwerpen. Met de eerste opzet was de klant al zeer tevreden. Na nog een paar kleine aanpassingen waren de flyers klaar voor de drukker.",
-		"img": "gernik",
-		"type": "design",
-		"web": "",
-		"code": ""
-	}
+  {
+    "title": "Strawberry website",
+    "text": "Dit is de eindopdracht van HTML/CSS tijdens m'n studie Front-end Developer.",
+    "img": "strawberry",
+    "type": "dev",
+    "web": "https://masterpluis.github.io/Strawberry_website",
+    "code": "https://github.com/Masterpluis/Strawberry_website"
+  },
+  {
+    "title": "Deze website",
+    "text": "",
+    "img": "oculity",
+    "type": "dev",
+    "web": "https://masterpluis.github.io/oculity",
+    "code": "https://github.com/Masterpluis/oculity"
+  },
+  {
+    "title": "Boxgame app",
+    "text": "",
+    "img": "boxgame",
+    "type": "dev",
+    "web": "https://masterpluis.github.io/Boxgame",
+    "code": "https://github.com/Masterpluis/Boxgame"
+  },
+  {
+    "title": "Gernik flyer",
+    "text": "De eigenaar van het beveiligingsbedrijf Gernik in Eindhoven heeft aan mij gevraagd om drie flyers te ontwerpen. Met de eerste opzet was de klant al zeer tevreden. Na nog een paar kleine aanpassingen waren de flyers klaar voor de drukker.",
+    "img": "gernik",
+    "type": "design",
+    "web": "",
+    "code": ""
+  }
 ]
