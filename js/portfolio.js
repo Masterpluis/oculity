@@ -1,16 +1,12 @@
 class Portfolio {
   constructor() {
     this.body = document.querySelector("body");
+    this.menuBtns = document.querySelectorAll("#portfolio-menu>button");
     this.itemsField = document.querySelector(".portfolio");
-
+    
     // FETCH CONTENT AND FILL
     this.fetchAndFill();
-
-    this.menuBtns = document.querySelectorAll("#portfolio-menu>button");
-    this.activeBtn = "";
-    this.target = "";
-
-    // FILTER
+    // FILTER FUNCTION
     this.buttonClickListener();
   }
 
@@ -84,28 +80,26 @@ class Portfolio {
     this.itemsField.appendChild(portfolioItem);
   }
 
-  // FILTER
   filterPortfolio(target) {
     this.target = target;
-    this.changeActiveClass();
-    this.filterItems();
+    this.changeActiveButton();
+    this.showAndHideItems();
   }
-  changeActiveClass() {
-    // REMOVE ACTIVE CLASS AND DISABLED ATTR FROM CURRENT ACTIVE BUTTON
+  changeActiveButton() {
+    // REMOVE ACTIVE CLASS AND DISABLED ATTR FROM ACTIVE BUTTON
     for (const btn of this.menuBtns) {
       if (btn.id === this.activeBtn) {
         btn.classList.remove("active");
         btn.disabled = false;
       }
     }
-    // MODIFY ACTIVE BTN
+    // UPDATE ACTIVE BUTTON
     this.activeBtn = this.target.id;
-    // ADD ACTIVE CLASS AND DISABLED ATTR TO CLICKED BUTTON
+    // ADD ACTIVE CLASS AND DISABLED ATTR TO ACTIVE BUTTON
     this.target.classList.add("active");
     this.target.disabled = true;
   }
-  // ADD/REMOVE HIDE CLASS
-  filterItems() {
+  showAndHideItems() {
     for (const item of this.portfolioItems) {
       if (
         (this.activeBtn === "all" && item.classList.contains("hide")) ||
