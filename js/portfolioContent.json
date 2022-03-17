@@ -21,6 +21,15 @@
 		]
   },
   {
+    "title": "Huisartsen app",
+    "text": ["UX-Design / Prototype"],
+    "img": "huisartsen",
+    "type": "design",
+    "buttons": [
+			{ "anchor": "Prototype", "url": "https://xd.adobe.com/view/f2a625b8-ee80-47de-a6a0-50cea244d9eb-a7f5/?fullscreen" }
+		]
+  },
+  {
     "title": "Mental Shift logo",
     "text": ["Logo design"],
     "img": "mental-shift",
