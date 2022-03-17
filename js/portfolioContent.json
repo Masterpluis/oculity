@@ -21,12 +21,12 @@
 		]
   },
   {
-    "title": "DramaRhino logo",
+    "title": "Mental Shift logo",
     "text": ["Logo design"],
-    "img": "dramarhino",
+    "img": "mental-shift",
     "type": "design",
     "buttons": [
-			{ "anchor": "Twitch", "url": "https://www.twitch.tv/dramarhino1" }
+			{ "anchor": "Website", "url": "http://mentalshift.eu/" }
 		]
   },
   {
@@ -71,12 +71,12 @@
 		]
   },
   {
-    "title": "Mental Shift logo",
+    "title": "DramaRhino logo",
     "text": ["Logo design"],
-    "img": "mental-shift",
+    "img": "dramarhino",
     "type": "design",
     "buttons": [
-			{ "anchor": "Website", "url": "http://mentalshift.eu/" }
+			{ "anchor": "Twitch", "url": "https://www.twitch.tv/dramarhino1" }
 		]
   },
   {
