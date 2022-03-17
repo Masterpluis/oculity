@@ -3,7 +3,7 @@ class Portfolio {
     this.body = document.querySelector("body");
     this.menuBtns = document.querySelectorAll("#portfolio-menu>button");
     this.itemsField = document.querySelector(".portfolio");
-    
+
     // FETCH CONTENT AND FILL
     this.fetchAndFill();
     // FILTER FUNCTION
@@ -29,9 +29,10 @@ class Portfolio {
     const portfolioItem = document.createElement("div");
     portfolioItem.classList = `column-1-3 portfolio-item ${item.type}`;
 
+    // IMAGE
     const image = document.createElement("img");
     image.src = `media/${item.img}.jpg`;
-    image.alt = `${item.title} mockup`;
+    image.alt = `${item.title}`;
 
     const portfolioContent = document.createElement("div");
     portfolioContent.classList = "portfolio-content";
@@ -39,39 +40,43 @@ class Portfolio {
     const txt = document.createElement("div");
     txt.classList = "portfolio-txt";
 
+    // TITLE
     const title = document.createElement("h2");
     title.innerText = item.title;
-
-    const text = document.createElement("p");
-    text.innerHTML = item.text ? item.text
-      : item.type.includes("dev") ? "HTML/CSS/JavaScript"
-      : "Graphic/UX Design";
-
     txt.appendChild(title);
-    txt.appendChild(text);
+
+    // PARAGRAPH
+    if (item.text.length) {
+      item.text.forEach((pText) => {
+        const text = document.createElement("p");
+        text.innerHTML = pText;
+        txt.appendChild(text);
+      });
+    }
+    if (item.text.length === 0) {
+      const text = document.createElement("p");
+      text.innerHTML = item.type.includes("dev")
+        ? "HTML / CSS / JavaScript"
+        : "Graphic Design / UX-Design";
+      txt.appendChild(text);
+    }
     portfolioContent.appendChild(txt);
 
-    if (item.type.includes("dev")) {
+    // BUTTONS
+    if (item.buttons.length) {
       const btns = document.createElement("div");
       btns.classList = "portfolio-btns";
 
-      const btnWeb = document.createElement("a");
-      btnWeb.classList = "button medium";
-      btnWeb.href = item.web;
-      btnWeb.target = "_blank";
-
-      const btnCode = document.createElement("a");
-      btnCode.classList = "button medium";
-      btnCode.href = item.code;
-      btnCode.target = "_blank";
-
       const svg =
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615.14 161.33"><polygon class="btn-backgr" points="155.3,159.9 3.1,70.1 155.3,1.4 459.8,1.4 612.1,91.2 459.8,159.9"/><polyline class="btn-lines" points="155.3,159.9 118.9,54.5 155.3,1.4"/><line class="btn-lines" x1="3.1" y1="70.1" x2="118.9" y2="54.5"/><polygon class="btn-lines" points="155.3,159.9 3.1,70.1 155.3,1.4 459.8,1.4 612.1,91.2 459.8,159.9"/></svg>';
-      btnWeb.innerHTML = "Website" + svg;
-      btnCode.innerHTML = "Code" + svg;
-
-      btns.appendChild(btnWeb);
-      btns.appendChild(btnCode);
+      for (let i = 0; i < item.buttons.length; i++) {
+        const btn = document.createElement("a");
+        btn.classList = "button medium";
+        btn.href = item.buttons[i].url;
+        btn.target = "_blank";
+        btn.innerHTML = item.buttons[i].anchor + svg;
+        btns.appendChild(btn);
+      }
       portfolioContent.appendChild(btns);
     }
 

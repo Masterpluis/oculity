@@ -1,34 +1,92 @@
 [
+	{
+		"title": "Strawberry Website",
+		"text": ["Dit is de eindopdracht van HTML/CSS tijdens m'n studie Front-end Developer."],
+		"img": "strawberry",
+		"type": "dev",
+		"buttons": [
+			{ "anchor": "Website", "url": "https://masterpluis.github.io/Strawberry_website" },
+			{ "anchor": "GitHub", "url": "https://github.com/Masterpluis/Strawberry_website" }
+		]
+	},
   {
-    "title": "Strawberry website",
-    "text": "Dit is de eindopdracht van HTML/CSS tijdens m'n studie Front-end Developer.",
-    "img": "strawberry",
-    "type": "dev",
-    "web": "https://masterpluis.github.io/Strawberry_website",
-    "code": "https://github.com/Masterpluis/Strawberry_website"
+    "title": "Digital Outlaws website",
+    "text": [
+			"WordPress / UX-Design",
+			"HTML / CSS"],
+    "img": "digital-outlaws",
+    "type": "design dev",
+    "buttons": [
+			{ "anchor": "Website", "url": "https://digitaloutlaws.nl" }
+		]
   },
   {
-    "title": "Deze website",
-    "text": "",
+    "title": "DramaRhino logo",
+    "text": ["Logo design"],
+    "img": "dramarhino",
+    "type": "design",
+    "buttons": [
+			{ "anchor": "Twitch", "url": "https://www.twitch.tv/dramarhino1" }
+		]
+  },
+  {
+    "title": "Deze Website",
+    "text": [],
     "img": "oculity",
     "type": "dev",
-    "web": "https://masterpluis.github.io/oculity",
-    "code": "https://github.com/Masterpluis/oculity"
-  },
-  {
-    "title": "Boxgame app",
-    "text": "",
-    "img": "boxgame",
-    "type": "dev",
-    "web": "https://masterpluis.github.io/Boxgame",
-    "code": "https://github.com/Masterpluis/Boxgame"
+    "buttons": [
+			{ "anchor": "Website", "url": "https://masterpluis.github.io/oculity" },
+			{ "anchor": "GitHub", "url": "https://github.com/Masterpluis/oculity" }
+		]
   },
   {
     "title": "Gernik flyer",
-    "text": "De eigenaar van het beveiligingsbedrijf Gernik in Eindhoven heeft aan mij gevraagd om drie flyers te ontwerpen. Met de eerste opzet was de klant al zeer tevreden. Na nog een paar kleine aanpassingen waren de flyers klaar voor de drukker.",
+    "text": [
+      "De eigenaar van het beveiligingsbedrijf Gernik in Eindhoven heeft aan mij gevraagd om drie flyers te ontwerpen.",
+      "Met de eerste opzet was de klant al zeer tevreden. Na nog een paar kleine aanpassingen waren de flyers klaar voor de drukker."
+    ],
     "img": "gernik",
     "type": "design",
-    "web": "",
-    "code": ""
+    "buttons": []
+  },
+  {
+    "title": "Wilfred Kalf website",
+    "text": [
+			"WordPress / UX-Design",
+			"HTML / CSS"],
+    "img": "wilfred-kalf",
+    "type": "design dev",
+    "buttons": [
+			{ "anchor": "Website", "url": "https://wilfredkalf.nl" }
+		]
+  },
+  {
+    "title": "Boxgame app",
+    "text": [],
+    "img": "boxgame",
+    "type": "dev",
+    "buttons": [
+			{ "anchor": "Website", "url": "https://masterpluis.github.io/Boxgame" },
+			{ "anchor": "GitHub", "url": "https://github.com/Masterpluis/Boxgame" }
+		]
+  },
+  {
+    "title": "Mental Shift logo",
+    "text": ["Logo design"],
+    "img": "mental-shift",
+    "type": "design",
+    "buttons": [
+			{ "anchor": "Website", "url": "http://mentalshift.eu/" }
+		]
+  },
+  {
+    "title": "Memory game",
+    "text": [],
+    "img": "memory",
+    "type": "dev",
+    "buttons": [
+			{ "anchor": "Website", "url": "https://masterpluis.github.io/memory-game" },
+			{ "anchor": "GitHub", "url": "https://github.com/Masterpluis/memory-game" }
+		]
   }
 ]
