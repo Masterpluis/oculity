@@ -139,14 +139,14 @@ a:hover .btn-lines, button:hover .btn-lines, button.active .btn-lines {
 
 /* ======= HOME BACKGROUND ======= */
 .atmosphere {
-	position: absolute;
+	position: fixed;
 	background: radial-gradient(ellipse farthest-side at bottom, #08171ab0 30%, #22145312 90%, #0c081b00 100%);
 	width: 100%;
 	height: 15vh;
 	bottom: 0;
 }
 .starfield {
-	position: absolute;
+	position: fixed;
 	transition: transform .4s;
 	z-index: -1;
 }
