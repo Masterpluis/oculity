@@ -68,7 +68,6 @@ section:last-of-type {
 img {
 	max-width: 100%;
 	display: block;
-	/* border-radius: 500rem; */
 }
 
 h1, h2, h3 {
@@ -131,13 +130,14 @@ a:hover svg, button:hover svg {
 a:hover .btn-lines, button:hover .btn-lines, button.active .btn-lines {
 	stroke: #8eb1be;
 }
+.disabled {
+	pointer-events: none;
+}
 
-/* ======= BACKGROUND ======= */
+/* ======= STARFIELD BACKGROUND ======= */
 .galaxy-blue {
 	background: radial-gradient(ellipse at bottom, #040b14 20%, #020407 100%);
 }
-
-/* ======= HOME BACKGROUND ======= */
 .atmosphere {
 	position: fixed;
 	background: radial-gradient(ellipse farthest-side at bottom, #08171ab0 30%, #22145312 90%, #0c081b00 100%);
@@ -210,6 +210,9 @@ a:hover .btn-lines, button:hover .btn-lines, button.active .btn-lines {
 .portfolio-item {
 	position: relative;
 }
+.portfolio-item>* {
+	border-radius: .25rem;
+}
 .portfolio-content {
 	box-sizing: border-box;
 	padding: 1rem;
@@ -222,6 +225,21 @@ a:hover .btn-lines, button:hover .btn-lines, button.active .btn-lines {
 }
 .hide {
 	display: none;
+}
+
+/* ======= SCROLLBAR ======= */
+::-webkit-scrollbar {
+  width: .6rem;
+}
+::-webkit-scrollbar-track {
+	background-color: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #212e44;
+  border-radius: .3rem;
+}
+::-webkit-scrollbar-thumb:hover {
+	box-shadow: inset 0px 0px 6px rgb(142, 177, 190);
 }
 
 /* ======= NON-MOBILE LAYOUT ======= */
